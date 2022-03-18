@@ -1,0 +1,90 @@
+.socialButtonDiv {
+  position: relative;
+  .socialButtonDiv__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    padding-top: 100px;
+  }
+}
+.contact {
+  width: 100vw !important;
+  padding-bottom: 60px;
+  height: auto;
+  display: grid;
+  place-items: center;
+  .contact__container {
+    min-width: 320px;
+    width: 40%;
+    .contact__container__title {
+      color: white;
+      font-size: 32px;
+      padding-left: 0px;
+      display: flex;
+      flex-direction: row;
+      z-index: 2 !important;
+      .contact__container__title__txt {
+        z-index: 2;
+        text-align: start;
+        font-size: 28px;
+      }
+      .contact__container__title__gmailContainer {
+        z-index: 2;
+      }
+    }
+    .contact__container__name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0px 0px 32px 0px;
+    }
+    .contact__container__email {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    .contact__container__reason {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    .contact__container__message {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    padding-top: 400px;
+    .contact__container {
+      .contact__container__title {
+        .contact__container__title__txt {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact {
+    padding-top: 500px;
+    .contact__container {
+      .contact__container__title {
+        .contact__container__title__txt {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

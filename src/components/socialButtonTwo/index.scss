@@ -1,0 +1,162 @@
+$widthHeight: 18px;
+$animation_time: 0.2s;
+$rotation: 30deg;
+$skew: -20deg;
+$translate: 6px;
+@mixin Keyframe($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+@mixin animation(
+  $delay,
+  $duration,
+  $animation,
+  $direction: forward,
+  $fillmode: fowards
+) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: $fillmode;
+  -webkit-animation-direction: $direction;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: $fillmode;
+  -moz-animation-direction: $direction;
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: $fillmode;
+  animation-direction: $direction;
+}
+@include Keyframe(animatePositionTwo) {
+  0% {
+    // background-color: black;
+    transform: translate(0%, 0%) rotate($rotation) skew($skew);
+  }
+  100% {
+    transform: translate($translate, $translate) rotate($rotation) skew($skew);
+    // background-color: red;
+  }
+}
+@include Keyframe(animatePseudoBeforeTwo) {
+  0% {
+    width: $widthHeight;
+    top: $widthHeight/2;
+    left: 210px;
+    height: 100%;
+  }
+  100% {
+    top: $widthHeight/2 - $translate/2;
+    width: $widthHeight - $translate;
+    left: 210px + $translate/2;
+  }
+}
+@include Keyframe(animatePseudoAfterTwo) {
+  0% {
+    bottom: -$widthHeight;
+    left: $widthHeight/2;
+    height: $widthHeight;
+    width: 100%;
+  }
+  100% {
+    bottom: -$widthHeight + $translate;
+    left: $widthHeight/2 + $translate/2;
+    height: $widthHeight - $translate;
+    width: 100%;
+  }
+}
+.SocialButtonTwo {
+  width: 210px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: black;
+  transform: rotate(30deg) skew(-20deg);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  &:hover {
+    cursor: pointer;
+    // @include animation(0, $animation_time, animatePosition, ease-in-out);
+  }
+  &:active {
+    @include animation(0, $animation_time, animatePositionTwo, ease-in-out);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: $widthHeight/2;
+    left: 210px;
+    height: 100%;
+    width: $widthHeight;
+    background-color: rgb(128, 128, 128);
+    transform: rotate(0deg) skewY(45deg);
+  }
+
+  &:active::before {
+    @include animation(0, $animation_time, animatePseudoBeforeTwo, ease-in-out);
+  }
+  &:hover::before {
+    // @include animation(0, $animation_time, animatePseudoBefore, ease-in-out);
+    background-color: rgb(51, 51, 51);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -$widthHeight;
+    left: $widthHeight/2;
+    height: $widthHeight;
+    width: 100%;
+    background-color: #b1b1b1;
+    transform: rotate(0deg) skewX(45deg);
+  }
+  &:active::after {
+    @include animation(0, $animation_time, animatePseudoAfterTwo, ease-in-out);
+  }
+  &:hover::after {
+    // @include animation(0, $animation_time, animatePseudoAfter, ease-in-out);
+    background-color: rgb(97, 97, 97);
+  }
+  .SocialButonTwo__button {
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    .SocialButonTwo__button__iconContainer {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      .SocialButonTwo__button__iconContainer__icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .SocialButonTwo__button__textContanier {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      .SocialButonTwo__button__textContanier__text {
+        padding-left: 5px;
+        font-size: 20px;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+    }
+  }
+}

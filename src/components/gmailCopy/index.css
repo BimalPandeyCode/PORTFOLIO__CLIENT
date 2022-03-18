@@ -1,0 +1,40 @@
+.GmailCopy {
+  font-size: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 32px;
+      grid-template-columns: 1fr 32px;
+  place-items: center;
+  background-color: #9febf8;
+  margin-left: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  z-index: 2 !important;
+}
+
+.GmailCopy:hover {
+  cursor: pointer;
+}
+
+.GmailCopy .GmailCopy__mail {
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  z-index: 2;
+}
+
+.GmailCopy .GmailCopy__button {
+  height: 32px;
+  width: 32px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.GmailCopy .GmailCopy__button .GmailCopy__button__img {
+  width: 28px;
+  height: 28px;
+  z-index: 2;
+}
+/*# sourceMappingURL=index.css.map */

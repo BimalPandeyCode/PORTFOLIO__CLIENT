@@ -1,0 +1,44 @@
+.ContactButtonContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .ContactButton {
+    width: 200px;
+    height: 55px;
+    font-size: 18px;
+    font-family: monospace;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    background-color: yellow;
+    :hover {
+      cursor: pointer;
+    }
+
+    .ContactButton__txtContainer {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      .ContactButton__txtContainer__txt {
+        z-index: 3;
+      }
+    }
+
+    .ContactButton__span {
+      // background-color: cyan;
+      background: rgb(131, 58, 180);
+      background: radial-gradient(
+        circle,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

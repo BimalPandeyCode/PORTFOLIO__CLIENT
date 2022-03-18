@@ -1,0 +1,10 @@
+.canvasContainer {
+  overflow: hidden !important;
+}
+.canvasContainer__canvas {
+  overflow: hidden !important;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  z-index: -1;
+}

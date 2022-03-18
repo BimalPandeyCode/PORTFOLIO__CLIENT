@@ -1,0 +1,210 @@
+.cursor {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  isolation: isolate;
+  z-index: 3;
+}
+
+.skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr min-content;
+      grid-template-columns: 1fr -webkit-min-content;
+      grid-template-columns: 1fr min-content;
+  height: auto;
+}
+
+.skills .skills__text {
+  color: white;
+}
+
+.skills .skills__text .skills__text__container {
+  padding-left: 64px;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__title {
+  color: #ffff33;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__experience {
+  color: #588b4e;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__Main {
+  padding-top: 5vh;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__text {
+  padding-bottom: 2vh;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__langs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  color: #dbe80c;
+  padding-bottom: 2vh;
+  font-size: 18px;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__langs div {
+  padding-bottom: 1vh;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__languages .skills__text__container__languages__title {
+  padding-bottom: 2vh;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__languages .skills__text__container__languages__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  font-size: 20px;
+  color: #f3dd17;
+}
+
+.skills .skills__text .skills__text__container .skills__text__container__languages div {
+  padding-bottom: 1vh;
+}
+
+.skills .skills__sphere {
+  margin: 0;
+  padding: 0;
+}
+
+.skills .skills__sphere .skills__sphere__container {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .skills .skills__text .skills__text__container {
+    padding-left: 16px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main {
+    padding-top: 5vh;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__text {
+    font-size: 16px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__langs {
+    font-size: 16px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__languages .skills__text__container__languages__title {
+    font-size: 20px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__languages .skills__text__container__languages__text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .skills {
+    -ms-grid-rows: 1fr min-content !important;
+        grid-template-rows: 1fr -webkit-min-content !important;
+        grid-template-rows: 1fr min-content !important;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "skillsText" "skillsSphere";
+  }
+  .skills .skills__text {
+    color: white;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: skillsText;
+  }
+  .skills .skills__text .skills__text__container {
+    padding-left: 0px;
+    width: auto;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__title {
+    color: #ffff33;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__experience {
+    color: #588b4e;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main {
+    padding-top: 5vh;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__text {
+    padding-bottom: 2vh;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__langs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 16px;
+            column-gap: 16px;
+    color: #dbe80c;
+    padding-bottom: 2vh;
+    font-size: 18px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__Main .skills__text__container__Main__langs div {
+    padding-bottom: 1vh;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__languages .skills__text__container__languages__title {
+    padding-bottom: 2vh;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__languages .skills__text__container__languages__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 16px;
+            column-gap: 16px;
+    font-size: 20px;
+    color: #f3dd17;
+  }
+  .skills .skills__text .skills__text__container .skills__text__container__languages div {
+    padding-bottom: 1vh;
+  }
+}
+/*# sourceMappingURL=index.css.map */

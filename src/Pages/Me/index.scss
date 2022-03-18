@@ -1,0 +1,83 @@
+.Me {
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  height: max-content;
+  .MeContainer {
+    color: rgba(0, 0, 0, 1);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: max-content;
+    z-index: -1;
+    .MeContainer__div1 {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: max-content;
+      width: 100%;
+      .MeContainer__div1__me {
+        font-size: 640px;
+        font-family: "Abril Fatface";
+        text-align: end;
+        margin: 0;
+        padding: 0;
+        // overflow: hidden;
+      }
+    }
+    .MeContainer__div2 {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: max-content;
+      width: 100%;
+      .MeContainer__div2__me {
+        font-size: 640px;
+        font-family: "Abril Fatface";
+        margin: 0;
+        padding: 0;
+        // overflow: hidden;
+      }
+    }
+  }
+  .Me__top {
+    display: grid;
+    place-items: center;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    .Me__top__div {
+      width: 100%;
+      max-width: 320px;
+      min-width: 300px;
+      min-height: 300px;
+      .Me__top__div__imageContainer {
+        width: 100%;
+        .Me__top__div__imageContainer__img {
+          width: 300px;
+          height: auto;
+          border-radius: 10px;
+          filter: grayscale(100%);
+          -webkit-filter: grayscale(100%);
+        }
+      }
+    }
+    .Me__top__div__textContainer {
+      width: 100%;
+      z-index: 3;
+      .Me__top__div__textContainer__text {
+        text-align: justify;
+        font-family: "Architects Daughter";
+        font-size: 18px;
+      }
+    }
+  }
+}

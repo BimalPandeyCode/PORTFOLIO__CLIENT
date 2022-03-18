@@ -1,0 +1,13 @@
+.ME {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.ME .ME__text {
+  color: #6e6e6e;
+  font-size: 300px;
+  margin: none;
+}
+/*# sourceMappingURL=index.css.map */

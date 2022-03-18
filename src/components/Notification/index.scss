@@ -1,0 +1,23 @@
+.NotificationDiv {
+  height: 0px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: rgb(0, 0, 0);
+  display: grid;
+  place-items: end;
+  z-index: 5;
+  .NotificationDiv__msgContainer {
+    background-color: rgb(255, 68, 68);
+    position: relative;
+    top: 70vh;
+    left: 300px;
+    width: fit-content;
+    padding: 5px 25px 5px 25px;
+    font-size: 18px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+}

@@ -1,0 +1,113 @@
+.letterContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "hi" "imBimal" "web" "dev";
+}
+
+.letterContainer .letterContainer__hi {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hi;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+}
+
+.letterContainer .letterContainer__hi div {
+  margin: 3px;
+  display: -ms-grid;
+  display: grid;
+  place-items: end;
+}
+
+.letterContainer .letterContainer__imBimal {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: imBimal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+}
+
+.letterContainer .letterContainer__imBimal div {
+  margin-left: 3px;
+  display: -ms-grid;
+  display: grid;
+  place-items: end;
+}
+
+.letterContainer .letterContainer__imBimal .letterContainer__imBimal__m {
+  margin-right: 16px;
+}
+
+.letterContainer .letterContainer__imBimal .letterContainer__imBimal__semicolon {
+  display: -ms-grid;
+  display: grid;
+  place-items: center !important;
+  height: 70%;
+}
+
+.letterContainer .letterContainer__Web {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: web;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+}
+
+.letterContainer .letterContainer__Web div {
+  margin: 3px;
+  display: -ms-grid;
+  display: grid;
+  place-items: end;
+}
+
+.letterContainer .letterContainer__dev {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: dev;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+}
+
+.letterContainer .letterContainer__dev div {
+  margin: 3px;
+  display: -ms-grid;
+  display: grid;
+  place-items: end;
+}
+/*# sourceMappingURL=index.css.map */

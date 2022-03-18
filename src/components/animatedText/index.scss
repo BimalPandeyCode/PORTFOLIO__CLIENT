@@ -1,0 +1,67 @@
+.letterContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "hi"
+    "imBimal"
+    "web"
+    "dev";
+  .letterContainer__hi {
+    grid-area: hi;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    div {
+      margin: 3px;
+      display: grid;
+      place-items: end;
+    }
+  }
+  .letterContainer__imBimal {
+    grid-area: imBimal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    div {
+      margin-left: 3px;
+
+      display: grid;
+      place-items: end;
+    }
+    .letterContainer__imBimal__m {
+      margin-right: 16px;
+    }
+    .letterContainer__imBimal__semicolon {
+      display: grid;
+      place-items: center !important;
+      height: 70%;
+    }
+  }
+  .letterContainer__Web {
+    grid-area: web;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    div {
+      margin: 3px;
+      display: grid;
+      place-items: end;
+    }
+  }
+  .letterContainer__dev {
+    grid-area: dev;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    div {
+      margin: 3px;
+      display: grid;
+      place-items: end;
+    }
+  }
+}
