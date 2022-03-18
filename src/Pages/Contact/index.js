@@ -18,6 +18,8 @@ import {
 } from "../../REDUX/contactForm";
 import { notify, revokeNotify } from "../../REDUX/notificationSlice";
 
+const herokuURL = "https://portfolio-fullstack.herokuapp.com/";
+
 const Contact = () => {
   let dispatch = useDispatch();
   let contactValues = useSelector((state) => state.contactReducer);
@@ -71,7 +73,7 @@ const Contact = () => {
       return;
     }
     axios
-      .post("http://localhost:5000/msg/", {
+      .post(`${herokuURL}msg/`, {
         name: contactValues.name.value,
         email: contactValues.email.value,
         reason: contactValues.reason.value,
