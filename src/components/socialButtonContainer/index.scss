@@ -1,7 +1,13 @@
 .SocialButtonsContainer {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  max-width: 100vw;
   justify-content: center;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 800px) {
+  .SocialButtonsContainer {
+    margin-bottom: 0px;
+  }
 }

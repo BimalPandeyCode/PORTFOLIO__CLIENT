@@ -3,6 +3,10 @@ $animation_time: 0.2s;
 $rotation: 30deg;
 $skew: -20deg;
 $translate: 6px;
+$scale: 1;
+:root {
+  --scale: #{1};
+}
 @mixin Keyframe($animation_name) {
   @-webkit-keyframes #{$animation_name} {
     @content;
@@ -48,10 +52,12 @@ $translate: 6px;
 @include Keyframe(animatePositionTwo) {
   0% {
     // background-color: black;
-    transform: translate(0%, 0%) rotate($rotation) skew($skew);
+    transform: translate(0%, 0%) rotate($rotation) skew($skew)
+      scale(var(--scale), var(--scale));
   }
   100% {
-    transform: translate($translate, $translate) rotate($rotation) skew($skew);
+    transform: translate($translate, $translate) rotate($rotation) skew($skew)
+      scale(var(--scale), var(--scale));
     // background-color: red;
   }
 }
@@ -89,7 +95,7 @@ $translate: 6px;
   place-items: center;
   background-color: white;
   color: black;
-  transform: rotate(30deg) skew(-20deg);
+  transform: rotate(30deg) skew(-20deg) scale(var(--scale), var(--scale));
   box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
   &:hover {
     cursor: pointer;
@@ -158,5 +164,20 @@ $translate: 6px;
         font-family: "Roboto Condensed", sans-serif;
       }
     }
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    --scale: #{0.85};
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --scale: #{0.65};
+  }
+}
+@media screen and (max-width: 420px) {
+  :root {
+    --scale: #{0.6};
   }
 }

@@ -32,13 +32,13 @@ const SocialButtons = ({ no }) => {
         if (width <= 800) {
           if (width <= 550) {
             if (width <= 400) {
-              return "7%";
+              return "0%";
             }
-            return "10%";
+            return "0%";
           }
-          return "20%";
+          return "10%";
         }
-        return "45%";
+        return "43%";
       },
       y: () => {
         if (window.innerWidth <= 400) {

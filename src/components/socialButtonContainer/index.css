@@ -6,10 +6,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100vw;
+  max-width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 800px) {
+  .SocialButtonsContainer {
+    margin-bottom: 0px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

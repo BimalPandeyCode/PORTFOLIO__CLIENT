@@ -1,14 +1,15 @@
 .socialButtonDiv {
   position: relative;
   .socialButtonDiv__container {
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
     display: flex;
     flex-direction: column;
-    row-gap: 100px;
-    padding-top: 100px;
+    row-gap: 50px;
+    padding-top: 30px;
   }
 }
 .contact {
@@ -18,6 +19,7 @@
   display: grid;
   place-items: center;
   .contact__container {
+    overflow: hidden !important;
     min-width: 320px;
     width: 40%;
     .contact__container__title {
@@ -66,8 +68,9 @@
 
 @media screen and (max-width: 800px) {
   .contact {
-    padding-top: 400px;
+    padding-top: 270px;
     .contact__container {
+      width: 60%;
       .contact__container__title {
         .contact__container__title__txt {
           font-size: 20px;
@@ -76,9 +79,9 @@
     }
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .contact {
-    padding-top: 500px;
+    padding-top: 260px;
     .contact__container {
       .contact__container__title {
         .contact__container__title__txt {
