@@ -3,15 +3,12 @@
   height: 50px;
   background-color: #2b2b2b;
 }
-
 .ContactInput .ContactInput__container {
   z-index: 2;
   height: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 .ContactInput .ContactInput__container .ContactInput__container__input {
   z-index: 2;
   width: calc(100% - 10px);
@@ -22,14 +19,12 @@
   border: none;
   outline: none;
 }
-
 .ContactInput .ContactInput__spanContainer {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 50px;
 }
-
 .ContactInput .ContactInput__spanContainer .ContactInput__spanContainer__animation {
   position: absolute;
   top: -50px;
@@ -37,7 +32,7 @@
   display: block;
   height: 50px;
   width: 0%;
-  background-color: lime;
+  background-color: rgb(0, 255, 0);
 }
 
 .ContactInputArea {
@@ -45,15 +40,12 @@
   height: 150px;
   background-color: #2b2b2b;
 }
-
 .ContactInputArea .ContactInputArea__container {
   z-index: 2;
   height: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 .ContactInputArea .ContactInputArea__container .ContactInputArea__container__inputArea {
   z-index: 2;
   width: calc(100% - 10px);
@@ -65,21 +57,18 @@
   border: none;
   outline: none;
 }
-
 .ContactInputArea .ContactInputArea__spanContainer {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 0px;
 }
-
 .ContactInputArea .ContactInputArea__spanContainer .ContactInputArea__spanContainer__animation {
   position: absolute;
   top: -150px;
   left: 0;
   height: 150px;
   display: block;
-  background-color: lime;
+  background-color: rgb(0, 255, 0);
   width: 0%;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

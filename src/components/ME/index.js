@@ -5,7 +5,9 @@ const ME = () => {
   return (
     <>
       <div className="ME">
-        <h1 className="ME__text">ME</h1>
+        <h1 style={{ userSelect: "none" }} className="ME__text">
+          ME
+        </h1>
       </div>
     </>
   );

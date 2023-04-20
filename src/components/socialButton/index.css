@@ -1,43 +1,14 @@
 :root {
   --scale: 1;
 }
-
-@-webkit-keyframes animatePosition {
-  0% {
-    -webkit-transform: translate(0%, 0%) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-            transform: translate(0%, 0%) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-  }
-  100% {
-    -webkit-transform: translate(-6px, 6px) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-            transform: translate(-6px, 6px) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-  }
-}
-
 @keyframes animatePosition {
   0% {
-    -webkit-transform: translate(0%, 0%) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-            transform: translate(0%, 0%) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
+    transform: translate(0%, 0%) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
   }
   100% {
-    -webkit-transform: translate(-6px, 6px) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-            transform: translate(-6px, 6px) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
+    transform: translate(-6px, 6px) rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
   }
 }
-
-@-webkit-keyframes animatePseudoBefore {
-  0% {
-    width: 18px;
-    top: 9px;
-    left: -18px;
-    height: 100%;
-  }
-  100% {
-    top: 6px;
-    width: 12px;
-    left: -12px;
-  }
-}
-
 @keyframes animatePseudoBefore {
   0% {
     width: 18px;
@@ -51,22 +22,6 @@
     left: -12px;
   }
 }
-
-@-webkit-keyframes animatePseudoAfter {
-  0% {
-    bottom: -18px;
-    left: -9px;
-    height: 18px;
-    width: 100%;
-  }
-  100% {
-    bottom: -12px;
-    left: -6px;
-    height: 12px;
-    width: 100%;
-  }
-}
-
 @keyframes animatePseudoAfter {
   0% {
     bottom: -18px;
@@ -81,25 +36,19 @@
     width: 100%;
   }
 }
-
 .SocialButton {
   width: 210px;
   height: 65px;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   background-color: white;
   color: black;
-  -webkit-transform: rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-          transform: rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
-  -webkit-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(-30deg) skew(20deg) scale(var(--scale), var(--scale));
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
 }
-
 .SocialButton:hover {
   cursor: pointer;
 }
-
 .SocialButton:active {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 0.2s;
@@ -117,7 +66,6 @@
   animation-fill-mode: fowards;
   animation-direction: ease-in-out;
 }
-
 .SocialButton::before {
   content: "";
   position: absolute;
@@ -125,11 +73,9 @@
   left: -18px;
   height: 100%;
   width: 18px;
-  background-color: gray;
-  -webkit-transform: rotate(0deg) skewY(-45deg);
-          transform: rotate(0deg) skewY(-45deg);
+  background-color: rgb(128, 128, 128);
+  transform: rotate(0deg) skewY(-45deg);
 }
-
 .SocialButton:active::before {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 0.2s;
@@ -147,11 +93,9 @@
   animation-fill-mode: fowards;
   animation-direction: ease-in-out;
 }
-
 .SocialButton:hover::before {
-  background-color: #333333;
+  background-color: rgb(51, 51, 51);
 }
-
 .SocialButton::after {
   content: "";
   position: absolute;
@@ -160,10 +104,8 @@
   height: 18px;
   width: 100%;
   background-color: #b1b1b1;
-  -webkit-transform: rotate(0deg) skewX(-45deg);
-          transform: rotate(0deg) skewX(-45deg);
+  transform: rotate(0deg) skewX(-45deg);
 }
-
 .SocialButton:active::after {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 0.2s;
@@ -181,42 +123,29 @@
   animation-fill-mode: fowards;
   animation-direction: ease-in-out;
 }
-
 .SocialButton:hover::after {
-  background-color: #616161;
+  background-color: rgb(97, 97, 97);
 }
-
 .SocialButton .SocialButon__button {
   border: none;
   outline: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .SocialButton .SocialButon__button .SocialButon__button__iconContainer {
   width: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 .SocialButton .SocialButon__button .SocialButon__button__iconContainer .SocialButon__button__iconContainer__icon {
   width: 48px;
   height: 48px;
 }
-
 .SocialButton .SocialButon__button .SocialButon__button__textContanier {
   width: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 .SocialButton .SocialButon__button .SocialButon__button__textContanier .SocialButon__button__textContanier__text {
   padding-left: 5px;
   font-size: 20px;
@@ -228,10 +157,8 @@
     --scale: 0.8;
   }
 }
-
 @media screen and (max-width: 500px) {
   :root {
     --scale: 0.65;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

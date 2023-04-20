@@ -3,101 +3,75 @@
   margin-left: 40%;
   margin-top: 16px;
   height: 48px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 0.7fr 0.7fr 0.7fr;
-      grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
-      grid-template-areas: ". me skills contacts";
+  grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
+  grid-template-areas: ". me skills contacts";
   z-index: 5;
   color: white;
   position: fixed;
   top: 0;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.32);
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
   backdrop-filter: blur(10.9px);
   -webkit-backdrop-filter: blur(10px);
   font-size: 20px;
   font-family: "Roboto Condensed", sans-serif;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
-
 .Navbar .Navbar__meContainer {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: me;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   overflow: hidden;
   cursor: pointer;
 }
-
 .Navbar .Navbar__meContainer:hover {
   color: black;
 }
-
 .Navbar .Navbar__meContainer .Navbar__meContainer__txt {
   z-index: 2;
 }
-
 .Navbar .Navbar__meContainer .Navbar__meContainer__span {
   height: 3px;
   width: 125px;
   background-color: cyan;
   z-index: 1;
 }
-
 .Navbar .Navbar__skillsContainer {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: skills;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   overflow: hidden;
   cursor: pointer;
 }
-
 .Navbar .Navbar__skillsContainer:hover {
   color: black;
 }
-
 .Navbar .Navbar__skillsContainer .Navbar__skillsContainer__txt {
   cursor: pointer;
   z-index: 2;
 }
-
 .Navbar .Navbar__skillsContainer .Navbar__skillsContainer__span {
   width: 125px;
   height: 3px;
   background-color: cyan;
   z-index: 1;
 }
-
 .Navbar .Navbar__contactContainer {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
   grid-area: contacts;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   overflow: hidden;
   cursor: pointer;
 }
-
 .Navbar .Navbar__contactContainer:hover {
   color: black;
 }
-
 .Navbar .Navbar__contactContainer .Navbar__contactContainer__txt {
   cursor: pointer;
   z-index: 2;
 }
-
 .Navbar .Navbar__contactContainer .Navbar__contactContainer__span {
   width: 125px;
   height: 3px;
@@ -107,8 +81,6 @@
 
 @media screen and (max-width: 800px) {
   .Navbar {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

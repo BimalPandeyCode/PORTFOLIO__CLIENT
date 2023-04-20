@@ -36,7 +36,7 @@ const buttonHoverAnimation = () => {
       GSAP.to(".ContactButton__span", {
         scaleX: 20,
         scaleY: 20,
-        duration: 0.4,
+        duration: 0.2,
       });
       GSAP.to(".ContactButton__txtContainer__txt", {
         color: "white",

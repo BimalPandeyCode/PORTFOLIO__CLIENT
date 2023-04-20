@@ -66,18 +66,28 @@ const Me = () => {
       <div className="Me">
         <div className="MeContainer">
           <div className="MeContainer__div1">
-            <h1 className="MeContainer__div1__me">M</h1>
+            <h1
+              className="MeContainer__div1__me"
+              style={{ userSelect: "none" }}
+            >
+              M
+            </h1>
           </div>
           <div className="MeContainer__div2">
-            <h1 className="MeContainer__div2__me">E</h1>
+            <h1
+              className="MeContainer__div2__me"
+              style={{ userSelect: "none" }}
+            >
+              E
+            </h1>
           </div>
         </div>
         <div className="Me__top">
           <div className="Me__top__div">
             <div className="Me__top__div__imageContainer">
               <img
+                style={{ userSelect: "none" }}
                 src={me}
-                // src="https://sunrift.com/wp-content/uploads/2014/12/Blake-profile-photo-square.jpg"
                 alt=""
                 className="Me__top__div__imageContainer__img"
               />

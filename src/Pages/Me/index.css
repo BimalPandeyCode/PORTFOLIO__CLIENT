@@ -4,18 +4,14 @@
   padding: 0;
   overflow: hidden;
   position: relative;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
-
 .Me .MeContainer {
-  color: black;
-  display: -ms-grid;
+  color: rgb(0, 0, 0);
   display: grid;
   place-items: center;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -23,22 +19,18 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   z-index: -1;
 }
-
 .Me .MeContainer .MeContainer__div1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 100%;
 }
-
 .Me .MeContainer .MeContainer__div1 .MeContainer__div1__me {
   font-size: 640px;
   font-family: "Abril Fatface";
@@ -46,43 +38,35 @@
   margin: 0;
   padding: 0;
 }
-
 .Me .MeContainer .MeContainer__div2 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 100%;
 }
-
 .Me .MeContainer .MeContainer__div2 .MeContainer__div2__me {
   font-size: 640px;
   font-family: "Abril Fatface";
   margin: 0;
   padding: 0;
 }
-
 .Me .Me__top {
-  display: -ms-grid;
   display: grid;
   place-items: center;
   margin-top: 250px;
   margin-bottom: 100px;
 }
-
 .Me .Me__top .Me__top__div {
   width: 100%;
   max-width: 320px;
   min-width: 300px;
   min-height: 300px;
 }
-
 .Me .Me__top .Me__top__div .Me__top__div__imageContainer {
   width: 100%;
 }
-
 .Me .Me__top .Me__top__div .Me__top__div__imageContainer .Me__top__div__imageContainer__img {
   width: 300px;
   height: auto;
@@ -90,15 +74,12 @@
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
-
 .Me .Me__top .Me__top__div__textContainer {
   width: 100%;
   z-index: 3;
 }
-
 .Me .Me__top .Me__top__div__textContainer .Me__top__div__textContainer__text {
   text-align: justify;
   font-family: "Architects Daughter";
   font-size: 18px;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

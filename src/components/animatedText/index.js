@@ -219,7 +219,7 @@ const Text = (child) => {
       <path
         className="letterPathB"
         d="M30.92 29.352C30.92 33.448 29.768 36.4133 27.464 38.248C25.16 40.0827 21.512 41 16.52 41H0.84V0.871998H16.52C21.0427 0.871998 24.2427 1.64 26.12 3.176C28.04 4.712 29 7.336 29 11.048C29 13.5653 28.616 15.4853 27.848 16.808C27.08 18.1307 25.672 19.0907 23.624 19.688C26.056 20.1147 27.8693 21.1387 29.064 22.76C30.3013 24.3387 30.92 26.536 30.92 29.352ZM21.896 12.136C21.896 10.3013 21.4907 9.04266 20.68 8.36C19.912 7.63467 18.5253 7.272 16.52 7.272H8.52V17.64H16.52C18.44 17.64 19.8053 17.2133 20.616 16.36C21.4693 15.5067 21.896 14.0987 21.896 12.136ZM23.496 28.84C23.496 26.8773 22.9627 25.512 21.896 24.744C20.872 23.976 19.08 23.592 16.52 23.592H8.52V34.344H16.52C19.08 34.344 20.872 33.9387 21.896 33.128C22.9627 32.3173 23.496 30.888 23.496 28.84Z"
-        fill="white"
+        fill="yellow"
       />
     </svg>
   );
@@ -621,7 +621,10 @@ const Text = (child) => {
   );
   return (
     <>
-      <div className="letterContainer">
+      <div
+        className="letterContainer"
+        style={{ paddingTop: 24, paddingBottom: 24 }}
+      >
         <div className="letterContainer__hi">
           <div>{H}</div>
           <div>{i}</div>
@@ -658,7 +661,7 @@ const Text = (child) => {
 };
 const animateLetters = (letterName) => {
   GSAP.to(`.letterPath${letterName}`, {
-    fill: "cyan",
+    fill: letterName === "B" ? "#202124" : "cyan",
     duration: 0.2,
   });
   GSAP.to(`.letter${letterName}`, {
@@ -683,7 +686,7 @@ const animateLetters = (letterName) => {
 };
 const animateLettersOnLeave = (letterName) => {
   GSAP.to(`.letterPath${letterName}`, {
-    fill: letterName === "B" || letterName === "P" ? " cyan" : "white",
+    fill: letterName === "B" || letterName === "P" ? "yellow" : "white",
     duration: 0.5,
   });
 };

@@ -3,9 +3,11 @@
   position: absolute;
   left: 0;
   z-index: 1;
+  user-select: none;
   .ME__text {
     color: #6e6e6e;
     font-size: 300px;
     margin: none;
+    user-select: none;
   }
 }

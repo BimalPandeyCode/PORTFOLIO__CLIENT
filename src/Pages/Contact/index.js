@@ -1,5 +1,5 @@
 import "./index.css";
-import React, { useEffect } from "react";
+import React from "react";
 import axios from "axios";
 import ContactInput from "../../components/input";
 import GSAP from "gsap";
@@ -13,23 +13,18 @@ import {
   handleEmailChange,
   handleReasonChange,
   handleMessageChange,
-  handleIpChange,
   handleClear,
 } from "../../REDUX/contactForm";
 import { notify, revokeNotify } from "../../REDUX/notificationSlice";
 
-const herokuURL = "https://portfolio-fullstack.herokuapp.com/";
+// const herokuURL = "https://portfolio-fullstack.herokuapp.com/";
+// const herokuURL = "https://portfoliobackend-production-89c7.up.railway.app";
+const herokuURL = "https://portfolio-v4vg.onrender.com/";
+// const herokuURL = "http://localhost:5000/";
 
 const Contact = () => {
   let dispatch = useDispatch();
   let contactValues = useSelector((state) => state.contactReducer);
-  useEffect(() => {
-    // * GET IP
-    axios
-      .get("https://api.ipify.org?format=json")
-      .then((res) => dispatch(handleIpChange(res.data.ip)))
-      .catch((err) => console.log(err));
-  }, []);
   const animateInputBoxes = () => {
     GSAP.to(
       [
@@ -78,7 +73,6 @@ const Contact = () => {
         email: contactValues.email.value,
         reason: contactValues.reason.value,
         message: contactValues.message.value,
-        ip: contactValues.ip,
       })
       .then((res) => {
         if (res.data.response === "Successful") {
@@ -100,10 +94,17 @@ const Contact = () => {
         }
         console.log(res);
       })
-      .catch(() => {
-        animateNotification(
-          "Something went wrong, please try again or reach me at bimalpandey32@gmail.com"
-        );
+      .catch((e) => {
+        console.log(e);
+        if (e.response.status === 429) {
+          animateNotification(
+            `Too many requests, please try again in 15 minutes or reach me at bimalpandey32@gmail.com`
+          );
+        } else {
+          animateNotification(
+            "Something went wrong, please try again or reach me at bimalpandey32@gmail.com"
+          );
+        }
       });
   };
   return (

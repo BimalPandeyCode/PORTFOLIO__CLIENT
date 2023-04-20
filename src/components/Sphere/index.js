@@ -96,7 +96,7 @@ const Sphere = () => {
       "HTML",
       "CSS/SASS",
       "JS/TS",
-      "REACT",
+      "React/React Native",
       "EXPRESS",
       "GSAP",
       "NODEJS",
@@ -104,7 +104,7 @@ const Sphere = () => {
       "UNITY/C#",
       "BLENDER",
       "MongoDB/SQL",
-      "My dogs",
+      "ThreeJS",
       "❤️",
     ];
     const render = () => {
@@ -121,7 +121,7 @@ const Sphere = () => {
           // ctx.lineTo(resolution.width / 2, resolution.height / 2);
           let fontSize = 10 * (1.2 + icoSphere[i].z);
           ctx.font = `${fontSize}px Monospace`;
-          ctx.fillStyle = "#ffa6b5";
+          ctx.fillStyle = "white";
 
           ctx.fillText(
             `${skillsIHave[i]}`,
@@ -130,14 +130,6 @@ const Sphere = () => {
               Math.round(ctx.measureText(skillsIHave[i]).width) / 2,
             -icoSphere2d[i].y + resolution.height / 2 + fontSize / 2
           );
-          // ctx.arc(
-          //   icoSphere2d[i].x + resolution.width / 2,
-          //   -icoSphere2d[i].y + resolution.height / 2,
-          //   1,
-          //   0,
-          //   2 * Math.PI,
-          //   true
-          // );
           ctx.stroke();
           ctx.closePath();
         }
@@ -147,15 +139,15 @@ const Sphere = () => {
         rotateY(rotate.y);
         if (!mouseOnCanvas) {
           rotate.x >= 0
-            ? rotate.x === 0 || rotate.x <= 0.0005
+            ? rotate.x === 0 || rotate.x <= 0.0004
               ? (rotate.x = 0)
-              : (rotate.x -= 0.0005)
-            : (rotate.x += 0.0005);
+              : (rotate.x -= 0.0004)
+            : (rotate.x += 0.0004);
           rotate.y >= 0
-            ? rotate.y === 0 || rotate.y <= 0.0005
+            ? rotate.y === 0 || rotate.y <= 0.0004
               ? (rotate.y = 0)
-              : (rotate.y -= 0.0005)
-            : (rotate.y += 0.0005);
+              : (rotate.y -= 0.0004)
+            : (rotate.y += 0.0004);
           if (rotate.x === 0 && rotate.y === 0) {
             animate = false;
           }
@@ -200,7 +192,7 @@ const Sphere = () => {
         }
       }
     });
-  }, [mouseOnCanvas]);
+  }, []);
   return (
     <>
       <canvas

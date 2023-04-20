@@ -1,11 +1,8 @@
 .ContactButtonContainer {
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .ContactButtonContainer .ContactButton {
   width: 200px;
   height: 55px;
@@ -16,31 +13,24 @@
   overflow: hidden;
   background-color: yellow;
 }
-
 .ContactButtonContainer .ContactButton :hover {
   cursor: pointer;
 }
-
 .ContactButtonContainer .ContactButton .ContactButton__txtContainer {
   width: 100%;
   height: 100%;
-  display: -ms-grid;
   display: grid;
   place-content: center;
 }
-
 .ContactButtonContainer .ContactButton .ContactButton__txtContainer .ContactButton__txtContainer__txt {
   z-index: 3;
 }
-
 .ContactButtonContainer .ContactButton .ContactButton__span {
-  background: #833ab4;
-  background: radial-gradient(circle, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  background: rgb(131, 58, 180);
+  background: radial-gradient(circle, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
   z-index: 1;
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-/*# sourceMappingURL=index.css.map */
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=index.css.map */

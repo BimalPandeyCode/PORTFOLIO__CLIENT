@@ -19,7 +19,6 @@ const contactSlice = createSlice({
       valid: false,
       value: "",
     },
-    ip: "",
     allValid: false,
   },
   reducers: {
@@ -35,8 +34,7 @@ const contactSlice = createSlice({
         state.email.valid &&
         state.name.valid &&
         state.message.valid &&
-        state.reason.valid &&
-        state.ip.length > 0
+        state.reason.valid
       ) {
         state.allValid = true;
       } else {
@@ -61,8 +59,7 @@ const contactSlice = createSlice({
         state.email.valid &&
         state.name.valid &&
         state.message.valid &&
-        state.reason.valid &&
-        state.ip.length > 0
+        state.reason.valid
       ) {
         state.allValid = true;
       } else {
@@ -81,8 +78,7 @@ const contactSlice = createSlice({
         state.email.valid &&
         state.name.valid &&
         state.message.valid &&
-        state.reason.valid &&
-        state.ip.length > 0
+        state.reason.valid
       ) {
         state.allValid = true;
       } else {
@@ -101,34 +97,12 @@ const contactSlice = createSlice({
         state.email.valid &&
         state.name.valid &&
         state.message.valid &&
-        state.reason.valid &&
-        state.ip.length > 0
+        state.reason.valid
       ) {
         state.allValid = true;
       } else {
         state.allValid = false;
       }
-    },
-    handleIpChange: (state, action) => {
-      state.ip = action.payload;
-      // if (
-      //   state.name.valid &&
-      //   state.email.valid &&
-      //   state.reason.valid &&
-      //   state.message.valid &&
-      //   state.ip.length > 0
-      // ) {
-      //   axios
-      //     .post("http://localhost:5000/msg/", {
-      //       name: state.name.value,
-      //       email: state.email.value,
-      //       reason: state.reason.value,
-      //       message: state.message.value,
-      //       ip: state.ip,
-      //     })
-      //     .then(() => {})
-      //     .catch(() => {});
-      // }
     },
     handleClear: (state) => {
       state.name = {

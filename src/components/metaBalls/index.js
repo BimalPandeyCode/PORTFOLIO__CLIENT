@@ -54,6 +54,7 @@ const MetaBall = () => {
         uniform vec2 resolution;
         uniform vec2 a_pos;
         uniform vec2 b_pos;
+        uniform vec3 color;
         void main(){
           float dist1 = distance(vec2(gl_FragCoord.x,gl_FragCoord.y),vec2(a_pos.x,a_pos.y));
           float dist2 = distance(vec2(gl_FragCoord.x,gl_FragCoord.y),vec2(b_pos.x,b_pos.y));
@@ -61,11 +62,11 @@ const MetaBall = () => {
           float dist4 = distance(vec2(gl_FragCoord.x,gl_FragCoord.y),vec2(mousePos.x,mousePos.y));
           float sum = 25.0/dist1+25.0/dist2+25.0/dist3+30.0/dist4;
           vec2 st = gl_FragCoord.xy/resolution;
-          if(sum <= 0.4 || (sum >= 0.57 && sum <= 0.6)){
+          if(sum <= 0.4 || (sum >= 0.57 && sum <= 0.61)){
             sum = 0.0;
             gl_FragColor = vec4(sum*0.4,sum,0,sum);
           }else{
-            gl_FragColor = vec4(sum*0.4,sum,0,1);
+            gl_FragColor = vec4(color.x/255.0,color.y*sum/255.0,color.z/255.0,1);
           }
         }
       `;
@@ -95,10 +96,24 @@ const MetaBall = () => {
       ctx.bindBuffer(ctx.ARRAY_BUFFER, buffer);
       ctx.bufferData(ctx.ARRAY_BUFFER, vertices, ctx.STATIC_DRAW);
 
+      let colors = [
+        [0, 247, 247], //cyan  gg
+        [0, 0, 0], //black gg
+        [144, 238, 144], //light pink //gg
+        [13, 152, 186], //light blue //gg
+        [255, 255, 0], //light yellow gg
+        [100, 255, 0], //light green gg
+      ];
+      let colorIndex = Math.floor(Math.random() * colors.length);
+      let color = colors[colorIndex];
+      console.log(color);
+
       const render = () => {
         ctx.useProgram(program);
         program.mousePos = ctx.getUniformLocation(program, "mousePos");
         ctx.uniform2fv(program.mousePos, mousePos);
+        program.color = ctx.getUniformLocation(program, "color");
+        ctx.uniform3fv(program.color, color);
 
         program.resolution = ctx.getUniformLocation(program, "resolution");
         ctx.uniform2fv(program.resolution, resolution);
