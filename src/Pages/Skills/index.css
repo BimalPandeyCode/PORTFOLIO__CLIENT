@@ -8,15 +8,18 @@
   pointer-events: none;
   mix-blend-mode: difference;
   isolation: isolate;
-  z-index: 3;
+  z-index: 4;
+  filter: blur(30px);
 }
 
 .skills {
   display: grid;
   grid-template-columns: 1fr min-content;
   height: auto;
+  z-index: 3;
 }
 .skills .skills__text {
+  cursor: url("../../Assets/cursor1 (Custom).png"), default;
   color: white;
 }
 .skills .skills__text .skills__text__container {

@@ -134,7 +134,6 @@ const SKillsSphere = () => {
     canvas.addEventListener("mousemove", (e) => {
       rotateAngle.x = (e.clientX * (0.005 + 0.005)) / size.width - 0.005;
       rotateAngle.y = -((e.clientY * (0.005 + 0.005)) / size.height - 0.005);
-      console.log(rotateAngle);
     });
   });
   return (

@@ -18,8 +18,9 @@ import {
 import { notify, revokeNotify } from "../../REDUX/notificationSlice";
 
 // const herokuURL = "https://portfolio-fullstack.herokuapp.com/";
-const herokuURL = "https://portfolio-v4vg.onrender.com/";
-// const herokuURL = "http://localhost:5000/";
+// const herokuURL = "https://portfoliobackend-production-89c7.up.railway.app";
+// const herokuURL = "https://portfolio-v4vg.onrender.com/";
+const herokuURL = "http://localhost:5000/";
 
 const Contact = () => {
   let dispatch = useDispatch();
@@ -80,7 +81,7 @@ const Contact = () => {
           animateInputBoxes();
         } else if (res.data.response === "INVALID") {
           animateNotification(
-            "Please fill all the input boxes with correct values.If you think this was an error, please reach me at bimalpandey32@gmail.com"
+            "Please fill all the input boxes with correct values.If you think this is an error, please reach me at bimalpandey32@gmail.com"
           );
         } else if (res.data.response === "BANNED") {
           animateNotification(

@@ -39,6 +39,7 @@ const Skills = () => {
   return (
     <>
       <div id="cursor" className="cursor"></div>
+      <div id="blur"></div>
       <div className="skills">
         <div
           className="skills__text"
@@ -57,8 +58,8 @@ const Skills = () => {
             );
 
             GSAP.to(".cursor", {
-              width: 75,
-              height: 75,
+              width: 100,
+              height: 100,
             });
           }}
           onMouseLeave={() => {
