@@ -18,7 +18,6 @@ import {
 import { notify, revokeNotify } from "../../REDUX/notificationSlice";
 
 // const herokuURL = "https://portfolio-fullstack.herokuapp.com/";
-// const herokuURL = "https://portfoliobackend-production-89c7.up.railway.app";
 const herokuURL = "https://portfolio-v4vg.onrender.com/";
 // const herokuURL = "http://localhost:5000/";
 
